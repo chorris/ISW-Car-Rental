@@ -88,7 +88,7 @@ public class CustomerDAOImp implements ICustomerDAO {
 	public void createCustomer(CustomerDTO c) throws DAOException{
 		try{
 			connManager.connect();
-			connManager.updateDB("INSERT INTO CUSTOMER VALUES ("+c.getDni()+","+c.getNameAndSurname()+","+c.getAddress()+","+c.getCity()+","+c.getPostalCode()+","+c.getDateDriverLicense()+","+c.getDigitsCC()+","+c.getMonthCC()+","+c.getYearCC()+","+c.getCvcCC()+","+c.getTypeCC()+")");;
+			connManager.updateDB("INSERT INTO CUSTOMER VALUES ('"+c.getDni()+"','"+c.getNameAndSurname()+"','"+c.getAddress()+"','"+c.getCity()+"','"+c.getPostalCode()+"',"+c.getDateDriverLicense()+",'"+c.getDigitsCC()+"',"+c.getMonthCC()+","+c.getYearCC()+","+c.getCvcCC()+","+c.getTypeCC()+")");;
 			connManager.close();
 			
 		}
